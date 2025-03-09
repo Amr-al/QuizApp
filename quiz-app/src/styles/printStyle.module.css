@@ -1,0 +1,62 @@
+@media print {
+    /* Hide elements that should not be printed */
+    .cursor-pointer {
+        display: none;
+    }
+
+    /* Make sure the content is well formatted for print */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Prevent page breaks within the content */
+    .flex, .text-xl, .border-4, .border-2 {
+        display: block;
+        page-break-inside: avoid;
+    }
+
+    /* Control the print layout to fit content into one page */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Ensure all content fits on one page */
+    .flex, .text-xl {
+        font-size: 14px; /* Adjust the font size for print */
+    }
+
+    /* Avoid large spaces between items */
+    .my-2, .gap-3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Prevent content overflow */
+    .border-4, .border-2 {
+        width: 100%;
+        border-width: 0.5px;
+    }
+
+    /* Scale everything down to fit the content on one page */
+    .printContent {
+        transform: scale(0.85); /* Reduce size to fit on a single page */
+        transform-origin: top left;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Page Size Control: Force print to a specific page size */
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    /* Prevent page breaks in the middle of the content */
+    .no-page-break {
+        page-break-before: always;
+    }
+}

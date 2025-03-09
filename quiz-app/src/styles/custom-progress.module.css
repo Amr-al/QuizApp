@@ -1,0 +1,25 @@
+.customprogress {
+    appearance: none; /* Remove default styles */
+    width: 100%; /* Set the width as needed */
+    height: 10px;
+}
+
+.customprogress::-webkit-progress-bar {
+    background-color: #E2E2B6; /* Background color */
+    border-radius: 8px; /* Border radius */
+}
+
+.customprogress::-webkit-progress-value {
+    background-color: blue; /* Progress color */
+    border-radius: 10px; /* Border radius */
+}
+
+.customprogress::-moz-progress-bar {
+    background-color: blue; /* Firefox progress color */
+}
+
+@media screen and (max-width:1020px) {
+    .customprogress{
+        width: 80%;
+    }
+}
